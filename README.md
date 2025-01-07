@@ -36,5 +36,6 @@ focus on creating Routing on FE
 
 // class 4
 
+- New Page - See all my connections
 - 
 
