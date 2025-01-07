@@ -11,6 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState("Nimesh@10");
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [error,setError] = useState("");
 
     const HandleSubmit = async () => {
 
@@ -23,6 +24,7 @@ const Login = () => {
             navigate("/feed");
 
         } catch (err) {
+            setError(err?.response?.data || "Something went wrong");
             console.error(err);
         }
     }
@@ -64,6 +66,7 @@ const Login = () => {
 
                     </div>
 
+                    <p className="text-red-500">{error}</p>
                     <div className="card-actions justify-center">
                         <button className="btn btn-primary" onClick={HandleSubmit}>Buy Now</button>
                     </div>

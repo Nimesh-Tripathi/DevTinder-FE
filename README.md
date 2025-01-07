@@ -26,5 +26,7 @@ focus on creating Routing on FE
 
 // class 3
 
-
+- You should not be access other routes without login
+- If token is not present, redirect user to login page
+- Logout Feature
 
