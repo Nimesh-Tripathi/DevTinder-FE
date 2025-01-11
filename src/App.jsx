@@ -7,6 +7,7 @@ import appStore from "./utils/appStore"
 import Profile from "./components/Profile"
 import Connections from "./components/Connections"
 import Requests from "./components/Requests"
+import SignUp from "./components/SignUp"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/profile" element={<Profile></Profile>}></Route>
             <Route path="/connections" element={<Connections></Connections>}></Route>
             <Route path="/requests" element={<Requests></Requests>}></Route>
+            <Route path="/signUp" element={<SignUp></SignUp>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

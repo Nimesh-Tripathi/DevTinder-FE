@@ -2,7 +2,7 @@ import { useState } from "react"
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
@@ -56,7 +56,7 @@ const Login = () => {
                             <div className="label">
                                 <span className="label-text">Password</span>
                             </div>
-                            <input type="text"
+                            <input type="password"
                                 placeholder="Type here"
                                 className="input input-bordered w-full max-w-xs"
                                 value={password}
@@ -64,13 +64,14 @@ const Login = () => {
                             />
                         </label>
 
-                    </div>
+                    </div>  
 
                     <p className="text-red-500">{error}</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary" onClick={HandleSubmit}>Buy Now</button>
+                        <button className="btn btn-primary" onClick={HandleSubmit}>Sign In</button>
                     </div>
-
+                    <br></br>
+                    <p>If You Are New User?  <Link className="text-green-500" to="/signUp">Please Sign UP</Link></p>
                 </div>
 
             </div>
